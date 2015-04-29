@@ -1,0 +1,256 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77E573F51AF0CE36000525C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77E573F41AF0CE36000525C3 /* main.cpp */; };
+		77E573FC1AF0CE7D000525C3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E573FB1AF0CE7D000525C3 /* GLUT.framework */; };
+		77E573FE1AF0CE8C000525C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E573FD1AF0CE8C000525C3 /* OpenGL.framework */; };
+		77E574011AF13565000525C3 /* vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77E574001AF13565000525C3 /* vector3d.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77E573EF1AF0CE36000525C3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		77E573F11AF0CE36000525C3 /* AxelRayTracing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AxelRayTracing; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E573F41AF0CE36000525C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		77E573FB1AF0CE7D000525C3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		77E573FD1AF0CE8C000525C3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		77E573FF1AF0D016000525C3 /* vector3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector3d.h; sourceTree = "<group>"; };
+		77E574001AF13565000525C3 /* vector3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector3d.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77E573EE1AF0CE36000525C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E573FE1AF0CE8C000525C3 /* OpenGL.framework in Frameworks */,
+				77E573FC1AF0CE7D000525C3 /* GLUT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77E573E81AF0CE36000525C3 = {
+			isa = PBXGroup;
+			children = (
+				77E573FD1AF0CE8C000525C3 /* OpenGL.framework */,
+				77E573FB1AF0CE7D000525C3 /* GLUT.framework */,
+				77E573F31AF0CE36000525C3 /* AxelRayTracing */,
+				77E573F21AF0CE36000525C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77E573F21AF0CE36000525C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77E573F11AF0CE36000525C3 /* AxelRayTracing */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77E573F31AF0CE36000525C3 /* AxelRayTracing */ = {
+			isa = PBXGroup;
+			children = (
+				77E573F41AF0CE36000525C3 /* main.cpp */,
+				77E573FF1AF0D016000525C3 /* vector3d.h */,
+				77E574001AF13565000525C3 /* vector3d.cpp */,
+			);
+			path = AxelRayTracing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77E573F01AF0CE36000525C3 /* AxelRayTracing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77E573F81AF0CE36000525C3 /* Build configuration list for PBXNativeTarget "AxelRayTracing" */;
+			buildPhases = (
+				77E573ED1AF0CE36000525C3 /* Sources */,
+				77E573EE1AF0CE36000525C3 /* Frameworks */,
+				77E573EF1AF0CE36000525C3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AxelRayTracing;
+			productName = AxelRayTracing;
+			productReference = 77E573F11AF0CE36000525C3 /* AxelRayTracing */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77E573E91AF0CE36000525C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = axel;
+				TargetAttributes = {
+					77E573F01AF0CE36000525C3 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 77E573EC1AF0CE36000525C3 /* Build configuration list for PBXProject "AxelRayTracing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 77E573E81AF0CE36000525C3;
+			productRefGroup = 77E573F21AF0CE36000525C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77E573F01AF0CE36000525C3 /* AxelRayTracing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77E573ED1AF0CE36000525C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E573F51AF0CE36000525C3 /* main.cpp in Sources */,
+				77E574011AF13565000525C3 /* vector3d.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		77E573F61AF0CE36000525C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		77E573F71AF0CE36000525C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77E573F91AF0CE36000525C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		77E573FA1AF0CE36000525C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77E573EC1AF0CE36000525C3 /* Build configuration list for PBXProject "AxelRayTracing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E573F61AF0CE36000525C3 /* Debug */,
+				77E573F71AF0CE36000525C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77E573F81AF0CE36000525C3 /* Build configuration list for PBXNativeTarget "AxelRayTracing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E573F91AF0CE36000525C3 /* Debug */,
+				77E573FA1AF0CE36000525C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77E573E91AF0CE36000525C3 /* Project object */;
+}
