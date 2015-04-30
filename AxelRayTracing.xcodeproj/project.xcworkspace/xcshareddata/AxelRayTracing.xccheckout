@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2BC73504-AE22-4145-A85F-9BCCD5C9852F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AxelRayTracing</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4B63CA5E98875D5DEC3234B530E7874A8424ADBD</key>
+		<string>https://github.com/axknightroad/RayTracing.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AxelRayTracing.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4B63CA5E98875D5DEC3234B530E7874A8424ADBD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/axknightroad/RayTracing.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4B63CA5E98875D5DEC3234B530E7874A8424ADBD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4B63CA5E98875D5DEC3234B530E7874A8424ADBD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RayTracing</string>
+		</dict>
+	</array>
+</dict>
+</plist>
