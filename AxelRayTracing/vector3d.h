@@ -8,6 +8,7 @@
 
 #ifndef AxelRayTracing_vector3d_h
 #define AxelRayTracing_vector3d_h
+
 #include <iostream>
 #include <cmath>
 
@@ -17,7 +18,7 @@
 using namespace std;
 
 class Vector3d {
-    
+
 public:
     float x;
     float y;
@@ -54,9 +55,7 @@ public:
     //求两点之间的距离
     float getDist(Vector3d v);
     //返回零向量
-    static inline Vector3d zero(){ return Vector3d(0,0,0); }
-    //输出向量的分量值
-    void show();
+    static inline Vector3d zero() { return Vector3d(0, 0, 0); }
 };
 
 #endif
