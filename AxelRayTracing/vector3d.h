@@ -17,6 +17,7 @@
 
 using namespace std;
 
+//三维向量类
 class Vector3d {
 
 public:

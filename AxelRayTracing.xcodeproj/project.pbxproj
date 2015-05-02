@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77E573F51AF0CE36000525C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77E573F41AF0CE36000525C3 /* main.cpp */; };
-		77E574011AF13565000525C3 /* vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77E574001AF13565000525C3 /* vector3d.cpp */; };
-		77E574041AF489BB000525C3 /* ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77E574031AF489BB000525C3 /* ray.cpp */; };
+		777368EC1AF4FF63005E01FA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77E573F41AF0CE36000525C3 /* main.cpp */; };
+		77C21A051AF51D6E00699DB4 /* sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A041AF51D6E00699DB4 /* sphere.cpp */; };
+		77C21A081AF5299000699DB4 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A071AF5299000699DB4 /* camera.cpp */; };
 		77E574071AF4B07F000525C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E573FD1AF0CE8C000525C3 /* OpenGL.framework */; };
 		77E5740B1AF4B0B9000525C3 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E5740A1AF4B0B9000525C3 /* libglfw3.a */; };
 		77E5740D1AF4B0D2000525C3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E5740C1AF4B0D2000525C3 /* IOKit.framework */; };
@@ -31,14 +31,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		777368E41AF4FDB4005E01FA /* ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ray.cpp; sourceTree = "<group>"; };
+		777368E51AF4FDB4005E01FA /* ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ray.h; sourceTree = "<group>"; };
+		777368E61AF4FDB4005E01FA /* vector3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector3d.h; sourceTree = "<group>"; };
+		777368E71AF4FDB4005E01FA /* vector3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector3d.cpp; sourceTree = "<group>"; };
+		777368ED1AF5041B005E01FA /* sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sphere.h; sourceTree = "<group>"; };
+		777368EE1AF504A6005E01FA /* intersectResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = intersectResult.h; sourceTree = "<group>"; };
+		77C21A041AF51D6E00699DB4 /* sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sphere.cpp; sourceTree = "<group>"; };
+		77C21A061AF527B200699DB4 /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
+		77C21A071AF5299000699DB4 /* camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = camera.cpp; sourceTree = "<group>"; };
 		77E573F11AF0CE36000525C3 /* AxelRayTracing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AxelRayTracing; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E573F41AF0CE36000525C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		77E573FB1AF0CE7D000525C3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		77E573FD1AF0CE8C000525C3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		77E573FF1AF0D016000525C3 /* vector3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector3d.h; sourceTree = "<group>"; };
-		77E574001AF13565000525C3 /* vector3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector3d.cpp; sourceTree = "<group>"; };
-		77E574021AF21601000525C3 /* ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ray.h; sourceTree = "<group>"; };
-		77E574031AF489BB000525C3 /* ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ray.cpp; sourceTree = "<group>"; };
 		77E5740A1AF4B0B9000525C3 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
 		77E5740C1AF4B0D2000525C3 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		77E5740E1AF4B0E8000525C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -87,11 +92,16 @@
 		77E573F31AF0CE36000525C3 /* AxelRayTracing */ = {
 			isa = PBXGroup;
 			children = (
+				777368E41AF4FDB4005E01FA /* ray.cpp */,
+				777368E51AF4FDB4005E01FA /* ray.h */,
+				777368E71AF4FDB4005E01FA /* vector3d.cpp */,
+				777368E61AF4FDB4005E01FA /* vector3d.h */,
+				777368ED1AF5041B005E01FA /* sphere.h */,
+				77C21A041AF51D6E00699DB4 /* sphere.cpp */,
+				777368EE1AF504A6005E01FA /* intersectResult.h */,
 				77E573F41AF0CE36000525C3 /* main.cpp */,
-				77E573FF1AF0D016000525C3 /* vector3d.h */,
-				77E574001AF13565000525C3 /* vector3d.cpp */,
-				77E574021AF21601000525C3 /* ray.h */,
-				77E574031AF489BB000525C3 /* ray.cpp */,
+				77C21A061AF527B200699DB4 /* camera.h */,
+				77C21A071AF5299000699DB4 /* camera.cpp */,
 			);
 			path = AxelRayTracing;
 			sourceTree = "<group>";
@@ -152,9 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77E574041AF489BB000525C3 /* ray.cpp in Sources */,
-				77E573F51AF0CE36000525C3 /* main.cpp in Sources */,
-				77E574011AF13565000525C3 /* vector3d.cpp in Sources */,
+				77C21A051AF51D6E00699DB4 /* sphere.cpp in Sources */,
+				77C21A081AF5299000699DB4 /* camera.cpp in Sources */,
+				777368EC1AF4FF63005E01FA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,13 +209,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/usr/local/include/**",
+					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-lGLFW3";
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -242,12 +252,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/usr/local/include/**",
+					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "-lGLFW3";
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
