@@ -44,7 +44,7 @@ Vector3d Sphere::getNormal(Vector3d p) {
     return p - center;
 }
 
-IntersectResult Sphere::isIntersecter(Ray _ray) {
+IntersectResult Sphere::isIntersected(Ray _ray) {
     IntersectResult result = IntersectResult::noHit();
     Vector3d v = _ray.getOrigin() -center;
     float a = v.dotMul(v) - radius*radius;

@@ -10,6 +10,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <GLUT/GLUT.h>
+#include "ray.h"
+#include "camera.h"
+#include "vector3d.h"
+#include "sphere.h"
 
 #define WINDOW_WIDTH  600
 #define WINDOW_HEIGHT 600
@@ -47,7 +51,7 @@ void drawScene(GLFWwindow* window) {
     double dy = 1.0f / WINDOW_HEIGHT;
     float dD = 255.0f / max_depth;
     glBegin(GL_POINTS);
-    
+
     for (long y = 0; y < WINDOW_HEIGHT; ++y) {
         double sy = 1 - dy*y;
         for (long x = 0; x < WINDOW_WIDTH; ++x) {
@@ -58,7 +62,7 @@ void drawScene(GLFWwindow* window) {
             glVertex2f(sx, sy);
         }
     }
-    
+
     glEnd();
     // 交换缓冲区
     glfwSwapBuffers(window);
@@ -82,25 +86,99 @@ void resizeGL(GLFWwindow* window, int width, int height) {
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+//渲染一个灰色球
+void renderDepth0(GLFWwindow* window) {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity();                                   // Reset The View
+    glTranslatef(-0.5f, -0.5f, -1.0f);
+    glPointSize(2.0);
+    float horiz = 0.0;
+    float dep = 10;
+    Camera camera0(Vector3d(horiz, 3, dep), Vector3d(0, 0, -1), Vector3d(0, 1, 0), 90);
+    long max_depth = 18;
+    Sphere* sphere1 = new Sphere(Vector3d(0, 3, -3), 3.0);
+    float dx = 1.0f / WINDOW_WIDTH;
+    float dy = 1.0f / WINDOW_HEIGHT;
+    float dD = 255.0f / max_depth;
+    glBegin(GL_POINTS);
+    for (long y = 0; y < WINDOW_HEIGHT; ++y) {
+        float sy = 1 - dy*y;
+        for (long x = 0; x < WINDOW_WIDTH; ++x) {
+            float sx = dx*x;
+            Ray ray(camera0.generateRay(sx, sy));
+            IntersectResult result = sphere1 -> isIntersected(ray);
+            if (result.is_hit) {
+                double t = MIN(result.distance*dD, 255.0f);
+                int depth = (int)(255 -t);
+                glColor3ub(depth, depth, depth);
+                glVertex2f(sx,sy);
+            }
+        }
+    }    
+    glEnd();
+    // 交换缓冲区
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+}
+//渲染一个有彩色球
+void renderDepth1(GLFWwindow* window) {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity();                                   // Reset The View
+    glTranslatef(-0.5f,-0.5f,-1.0f);
+    glPointSize(2.0);
+    Camera camera0( Vector3d(0, 3, 10),Vector3d(0, 0, -1),Vector3d(0, 1, 0), 90);
+    long maxDepth=20;
+    Sphere* sphere1 = new Sphere(Vector3d(0, 3, -3), 3.0);
+    float dx=1.0f/WINDOW_WIDTH;
+    float dy=1.0f/WINDOW_HEIGHT;
+    glBegin(GL_POINTS);
+    for (long y = 0; y < WINDOW_HEIGHT; ++y)
+    {
+        float sy = 1 - dy*y;
+        for (long x = 0; x < WINDOW_WIDTH; ++x)
+        {
+            float sx =dx*x;
+            Ray ray(camera0.generateRay(sx, sy));
+            IntersectResult result = sphere1->isIntersected(ray);
+            if (result.is_hit)
+            {
+                //double t=MIN(result.distance*dD,255.0f);
+                //int depth = (int)(255 -t);
+                //xuanranshengdu
+                //glColor3ub(depth,depth,depth);
+                //xuanran normal
+                glColor3ub(128*(result.normal.x+1),128*(result.normal.y+1),128*(result.normal.z+1));
+                glVertex2f(sx,sy);
+            }
+        }
+    }
+    glEnd();
+    // 交换缓冲区
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+}
 
 int main(void) {
     //初始化 GLFW
     GLFWwindow* window;
-    if (!glfwInit()) exit(EXIT_FAILURE);
+    if (!glfwInit())
+        exit(EXIT_FAILURE);
     // 创建一个窗口
     window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Hello World", NULL, NULL);
     if (!window) {
         glfwTerminate();
         exit(EXIT_FAILURE);
     }
+    glfwMakeContextCurrent(window);
     //初始化窗口
     initScene(WINDOW_WIDTH, WINDOW_HEIGHT);
     //设置窗口大小发生变化时的回调函数
-    glfwSetWindowSizeCallback(window, resizeGL);
+    //glfwSetWindowSizeCallback(window, resizeGL);
     //主循环
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
-        drawScene(window);
+        //drawScene(window);
+        renderDepth1(window);
     }
     glfwTerminate();
     exit( EXIT_SUCCESS );

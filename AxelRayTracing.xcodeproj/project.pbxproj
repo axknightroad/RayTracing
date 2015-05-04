@@ -10,6 +10,8 @@
 		777368EC1AF4FF63005E01FA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77E573F41AF0CE36000525C3 /* main.cpp */; };
 		77C21A051AF51D6E00699DB4 /* sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A041AF51D6E00699DB4 /* sphere.cpp */; };
 		77C21A081AF5299000699DB4 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A071AF5299000699DB4 /* camera.cpp */; };
+		77C21A091AF5D94200699DB4 /* vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 777368E71AF4FDB4005E01FA /* vector3d.cpp */; };
+		77C21A0A1AF5D94600699DB4 /* ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 777368E41AF4FDB4005E01FA /* ray.cpp */; };
 		77E574071AF4B07F000525C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E573FD1AF0CE8C000525C3 /* OpenGL.framework */; };
 		77E5740B1AF4B0B9000525C3 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E5740A1AF4B0B9000525C3 /* libglfw3.a */; };
 		77E5740D1AF4B0D2000525C3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E5740C1AF4B0D2000525C3 /* IOKit.framework */; };
@@ -165,6 +167,8 @@
 				77C21A051AF51D6E00699DB4 /* sphere.cpp in Sources */,
 				77C21A081AF5299000699DB4 /* camera.cpp in Sources */,
 				777368EC1AF4FF63005E01FA /* main.cpp in Sources */,
+				77C21A091AF5D94200699DB4 /* vector3d.cpp in Sources */,
+				77C21A0A1AF5D94600699DB4 /* ray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
