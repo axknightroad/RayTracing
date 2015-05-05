@@ -39,4 +39,9 @@ void renderDepth2(GLFWwindow* window);
 
 void renderUnion(GLFWwindow* window);
 
+Color rayTraceRecursive(MyObject* scene,
+                        Ray& ray,
+                        long max_reflect);
+void renderRecursive(GLFWwindow* window);
+
 #endif /* defined(__AxelRayTracing__render__) */

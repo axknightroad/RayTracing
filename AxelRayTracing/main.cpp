@@ -40,7 +40,7 @@ int main(void) {
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         //drawScene(window);
-        renderUnion(window);
+        renderRecursive(window);
     }
     glfwTerminate();
     exit( EXIT_SUCCESS );
