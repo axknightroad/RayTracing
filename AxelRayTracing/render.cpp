@@ -156,9 +156,9 @@ void renderDepth2(GLFWwindow* window) {
     glLoadIdentity();                                   // Reset The View
     glTranslatef(-0.5f,-0.5f,-1.0f);
     glPointSize(2.0);
-    Camera camera0( Vector3d(0, 10, 10),Vector3d(0, -0.5, -1),Vector3d(0, 1, 0), 90);
+    Camera camera0(Vector3d(0, 10, 10),Vector3d(0, -0.5, -1),Vector3d(0, 1, 0), 90);
     Plane plane1(Vector3d(0, 1, 0),1.0);
-    Sphere sphere1(Vector3d(0, 3, -10), 3.0);
+    Sphere sphere1(Vector3d(0, 1, -10), 3.0);
     plane1.material=new Checker(0.7f);
     sphere1.material=new Phong(Color::red(), Color::white(), 16);
     long max_depth=20;
@@ -174,14 +174,62 @@ void renderDepth2(GLFWwindow* window) {
         {
             float sx =dx*x;
             Ray ray(camera0.generateRay(sx, sy));
-            //IntersectResult result = sphere1.isIntersected(ray);
-            IntersectResult result = plane1.isIntersected(ray);
+            IntersectResult result = sphere1.isIntersected(ray);
+            //IntersectResult result = plane1.isIntersected(ray);
             if (result.is_hit)
             {
-                //Color color = sphere1.material->sample(ray, result.position, result.normal);
-                Color color =plane1.material->sample(ray, result.position, result.normal);
+                Color color = sphere1.material->sample(ray, result.position, result.normal);
+              //  Color color =plane1.material->sample(ray, result.position, result.normal);
                 color.saturate();
             //    color.getInfo();
+                glColor3ub(color.r*255,color.g*255,color.b*255);
+                glVertex2f(sx,sy);
+            }
+        }
+    }
+    glEnd();
+    // 交换缓冲区
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+}
+
+void renderUnion(GLFWwindow* window) {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity();                                   // Reset The View
+    glTranslatef(-0.5f,-0.5f,-1.0f);
+    glPointSize(2.0);
+    Camera camera0(Vector3d(0, 10, 10),Vector3d(0, -0.5, -1),Vector3d(0, 1, 0), 90);
+    Plane* plane1=new Plane(Vector3d(0, 1, 0),1.0);
+    Sphere* sphere1=new Sphere(Vector3d(-2, 3, -10), 2.0);
+    Sphere* sphere2=new Sphere(Vector3d(2, 2, -7), 1.0);
+    plane1->material=new Checker(0.7f);
+    sphere1->material=new Phong(Color::red(), Color::white(), 16);
+    sphere2->material=new Phong(Color::blue(), Color::white(), 16);
+    Union scence;
+    scence.push(plane1);
+    scence.push(sphere1);
+    scence.push(sphere2);
+    long maxDepth=20;
+    
+    float dx=1.0f/WINDOW_WIDTH;
+    float dy=1.0f/WINDOW_HEIGHT;
+    float dD=255.0f/maxDepth;
+    glBegin(GL_POINTS);
+    for (long y = 0; y < WINDOW_HEIGHT; ++y)
+    {
+        float sy = 1 - dy*y;
+        for (long x = 0; x < WINDOW_WIDTH; ++x)
+        {
+            float sx =dx*x;
+            Ray ray(camera0.generateRay(sx, sy));
+            IntersectResult result = scence.isIntersected(ray);
+            //IntersectResult result = plane1.isIntersected(ray);
+            if (result.is_hit)
+            {
+                Color color = result.object->material->sample(ray, result.position, result.normal);
+                //Color color =plane1.material->sample(ray, result.position, result.normal);
+                color.saturate();
+                //color.show();
                 glColor3ub(color.r*255,color.g*255,color.b*255);
                 glVertex2f(sx,sy);
             }

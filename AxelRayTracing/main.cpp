@@ -26,7 +26,7 @@ int main(void) {
     if (!glfwInit())
         exit(EXIT_FAILURE);
     // 创建一个窗口
-    window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Ray Tracing", NULL, NULL);
     if (!window) {
         glfwTerminate();
         exit(EXIT_FAILURE);
@@ -40,7 +40,7 @@ int main(void) {
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         //drawScene(window);
-        renderDepth2(window);
+        renderUnion(window);
     }
     glfwTerminate();
     exit( EXIT_SUCCESS );

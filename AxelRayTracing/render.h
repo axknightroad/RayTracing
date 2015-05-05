@@ -23,6 +23,7 @@
 #include "plane.h"
 #include "phong.h"
 #include "checker.h"
+#include "union.h"
 
 void initScene(int w,int h);
 
@@ -35,5 +36,7 @@ void renderDepth0(GLFWwindow* window);
 void renderDepth1(GLFWwindow* window);
 
 void renderDepth2(GLFWwindow* window);
+
+void renderUnion(GLFWwindow* window);
 
 #endif /* defined(__AxelRayTracing__render__) */
