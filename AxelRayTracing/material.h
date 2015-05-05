@@ -23,9 +23,9 @@ public:
     virtual ~Material();
     float getRef();
     void setRef(float _reflectiveness);
-    virtual Color sample(const Ray& ray,
-                         const Vector3d& position,
-                         const Vector3d& normal);
+    virtual Color sample(Ray& ray,
+                         Vector3d& position,
+                         Vector3d& normal);
 };
 
 #endif /* defined(__AxelRayTracing__material__) */

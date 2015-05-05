@@ -30,9 +30,9 @@ public:
           const float& _shininess,
           float _reflectiveness=0);
     virtual ~Phong();
-    virtual Color sample(const Ray& ray,
-                         const Vector3d& position,
-                         const Vector3d& normal);
+    virtual Color sample(Ray& ray,
+                         Vector3d& position,
+                         Vector3d& normal);
 };
 
 

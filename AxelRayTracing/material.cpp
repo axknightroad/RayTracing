@@ -24,9 +24,9 @@ void Material::setRef(float _reflectiveness) {
     reflectiveness = _reflectiveness;
 }
 
-Color Material::sample(const Ray &ray,
-                       const Vector3d &position,
-                       const Vector3d &normal) {
+Color Material::sample(Ray &ray,
+                       Vector3d &position,
+                       Vector3d &normal) {
     cout<< "Base Sample" <<endl;
     return Color();
 }

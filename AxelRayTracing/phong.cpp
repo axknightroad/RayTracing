@@ -22,8 +22,11 @@ Phong::Phong(const Color& _diffuse,
     reflectiveness = _reflectiveness;
 }
 
-Color Phong::sample(const Ray &ray, const Vector3d &position, const Vector3d &normal) {
-    Vector3d n = normal;
-    float n_dot_l = n.dotMul(light_dir);
-    
+Color Phong::sample(Ray &ray, Vector3d &position, Vector3d &normal) {
+    float n_dot_l = normal.dotMul(light_dir);
+    Vector3d h = (light_dir -ray.getDirection()).normalize();
+    float n_dot_h = normal.dotMul(h);
+    Color diffuse_term = this->diffuse.multiply(std::max(n_dot_l, (float)0));
+    Color specular_term = this->specular.multiply(pow(std::max(n_dot_h, (float)0), this->shininess));
+    return light_color.modulate(diffuse_term.add(specular_term));
 }

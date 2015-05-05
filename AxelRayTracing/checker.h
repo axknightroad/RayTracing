@@ -13,14 +13,14 @@
 #include "color.h"
 #include "material.h"
 
-class Check : public Material {
+class Checker : public Material {
 private:
     float scale;
 public:
-    Check();
-    Check(float _scale, float _reflectiveness=0);
-    virtual ~Check();
-    virtual Color sample(const Ray& ray,const Vector3d& position,const Vector3d& normal);
+    Checker();
+    Checker(float _scale, float _reflectiveness=0);
+    virtual ~Checker();
+    virtual Color sample(Ray& ray,Vector3d& position,Vector3d& normal);
 };
 
 #endif /* defined(__AxelRayTracing__check__) */
