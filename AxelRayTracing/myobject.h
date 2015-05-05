@@ -10,15 +10,15 @@
 #define AxelRayTracing_myobject_h
 
 #include "material.h"
-#include "intersectResult.h"
-#include "ray.h"
 
+//空间三维物体类
 class MyObject {
-public:
+ public:
     Material* material;
     MyObject();
-    virtual IntersectResult isIntersected(Ray& _ray)=0;
     virtual ~MyObject();
+    
+    virtual IntersectResult isIntersected(Ray& _ray)=0;
 };
 
 #endif

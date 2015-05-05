@@ -16,19 +16,23 @@
 
 using namespace std;
 
+//颜色类
 class Color {
 public:
     float r;
     float g;
     float b;
+    
     Color();
     Color(float _r, float _g, float _b);
     virtual ~Color();
+    
     Color add(const Color& c);
     Color multiply(float s) const;
     Color modulate(const Color& c) const;
     void saturate();
     void getInfo();
+    
     static inline Color black() { return Color(0,0,0); }
     static inline Color white() { return Color(1,1,1); }
     static inline Color red() { return Color(1,0,0); }

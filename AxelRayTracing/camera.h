@@ -11,11 +11,20 @@
 
 #include <math.h>
 #include "ray.h"
-#include "vector3d.h"
 
+//摄像机/眼睛类
 class Camera {
-
-private:
+ public:
+    Camera();
+    ~Camera();
+    Camera(const Vector3d& _eye,
+           const Vector3d& _front,
+           const Vector3d& _ref_up,
+           const float _fov);
+    
+    Ray generateRay(float x, float y);
+    
+ private:
     Vector3d eye;
     Vector3d front;
     Vector3d ref_up;
@@ -23,14 +32,6 @@ private:
     Vector3d right;
     Vector3d up;
     float fov_scale;
-public:
-    Camera();
-    ~Camera();
-    Camera(const Vector3d& _eye,
-           const Vector3d& _front,
-           const Vector3d& _ref_up,
-           const float _fov);
-    Ray generateRay(float x, float y);
 };
 
 #endif

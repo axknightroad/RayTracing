@@ -9,23 +9,23 @@
 #ifndef __AxelRayTracing__material__
 #define __AxelRayTracing__material__
 
-#include "vector3d.h"
 #include "color.h"
 #include "intersectResult.h"
 #include "ray.h"
 
+//材质类
 class Material {
-protected:
-    float reflectiveness;
-public:
+ public:
     Material();
     Material(float _reflectiveness);
     virtual ~Material();
+    
     float getRef();
     void setRef(float _reflectiveness);
-    virtual Color sample(Ray& ray,
-                         Vector3d& position,
-                         Vector3d& normal);
+    virtual Color sample(Ray& ray, Vector3d& position, Vector3d& normal);
+    
+ protected:
+    float reflectiveness;
 };
 
 #endif /* defined(__AxelRayTracing__material__) */

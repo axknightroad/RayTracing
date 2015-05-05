@@ -9,30 +9,27 @@
 #ifndef __AxelRayTracing__phong__
 #define __AxelRayTracing__phong__
 
-#include "vector3d.h"
-#include "color.h"
-#include "ray.h"
 #include "material.h"
 
 static Vector3d light_dir = Vector3d(1, 1, 1).normalize();
 static Color light_color = Color::white();
 
+//phong类材质
 class Phong : public Material {
-private:
-    Color   diffuse;
-    Color   specular;
-    float   shininess;
-    
-public:
+ public:
     Phong();
     Phong(const Color& _diffuse,
           const Color& _specular,
           const float& _shininess,
           float _reflectiveness=0);
     virtual ~Phong();
-    virtual Color sample(Ray& ray,
-                         Vector3d& position,
-                         Vector3d& normal);
+    
+    virtual Color sample(Ray& ray, Vector3d& position, Vector3d& normal);
+    
+ private:
+    Color   diffuse;
+    Color   specular;
+    float   shininess;
 };
 
 

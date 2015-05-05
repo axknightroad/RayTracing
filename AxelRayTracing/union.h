@@ -14,15 +14,17 @@
 
 using namespace std;
 
+//将待渲染联合类
 class Union : public MyObject {
-private:
-    vector<MyObject*> objects;
-    
-public:
+ public:
     Union();
     virtual ~Union();
     void push(MyObject* object);
-    virtual IntersectResult isIntersected(Ray& _ray); 
+ 
+    virtual IntersectResult isIntersected(Ray& _ray);
+    
+ private:
+    vector<MyObject *> objects;    
 };
 
 #endif /* defined(__AxelRayTracing__union__) */

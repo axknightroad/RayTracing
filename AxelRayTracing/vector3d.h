@@ -17,10 +17,9 @@
 
 using namespace std;
 
-//三维向量类
+//三维向量类,也可以用来表示空间中的点
 class Vector3d {
-
-public:
+ public:
     float x;
     float y;
     float z;
@@ -29,6 +28,7 @@ public:
     ~Vector3d();
     // 用户构造函数
     Vector3d(float pos_x, float pos_y, float pos_z);
+    
     //输出向量信息
     void getInfo();
     //向量加法
@@ -55,6 +55,7 @@ public:
     Vector3d normalize();
     //求两点之间的距离
     float getDist(Vector3d v);
+    
     //返回零向量
     static inline Vector3d zero() { return Vector3d(0, 0, 0); }
 };

@@ -22,11 +22,11 @@ Color Color::add(const Color &c) {
     return Color(r + c.r, g + c.g, b + c.b);
 }
 
-Color Color::multiply(float s) const{
+Color Color::multiply(float s) const {
     return Color(r * s, g * s, b * s);
 }
 
-Color Color::modulate(const Color &c) const{
+Color Color::modulate(const Color &c) const {
     return Color(r * c.r, g * c.g, b * c.b);
 }
 

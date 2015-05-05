@@ -9,18 +9,19 @@
 #ifndef __AxelRayTracing__check__
 #define __AxelRayTracing__check__
 
-#include <stdlib.h>
-#include "color.h"
 #include "material.h"
 
+//棋盘材料类
 class Checker : public Material {
-private:
-    float scale;
-public:
+ public:
     Checker();
     Checker(float _scale, float _reflectiveness=0);
     virtual ~Checker();
+    
     virtual Color sample(Ray& ray,Vector3d& position,Vector3d& normal);
+
+ private:
+    float scale;
 };
 
 #endif /* defined(__AxelRayTracing__check__) */

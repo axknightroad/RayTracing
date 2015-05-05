@@ -9,23 +9,22 @@
 #ifndef AxelRayTracing_plane_h
 #define AxelRayTracing_plane_h
 
-#include "vector3d.h"
-#include "intersectResult.h"
-#include "ray.h"
-//#include "checkermaterial.h"
 #include "myobject.h"
 
+//地板类
 class Plane : public MyObject {
-private:
+ public:
+    Plane();
+    Plane(const Vector3d& _normal, float _distance);
+    virtual ~Plane();
+
+    virtual IntersectResult isIntersected(Ray& _ray);
+
+ private:
     //法向量
     Vector3d normal;
     //到原点的距离
     float distance;
-public:
-    Plane();
-    Plane(const Vector3d& _normal, float _distance);
-    virtual ~Plane();
-    virtual IntersectResult isIntersected(Ray& _ray);
 };
 
 #endif
