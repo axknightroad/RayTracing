@@ -44,7 +44,7 @@ Vector3d Sphere::getNormal(Vector3d p) {
     return p - center;
 }
 
-IntersectResult Sphere::isIntersected(Ray _ray) {
+IntersectResult Sphere::isIntersected(Ray& _ray) {
     IntersectResult result = IntersectResult::noHit();
     Vector3d v = _ray.getOrigin() -center;
     float a = v.dotMul(v) - radius*radius;
@@ -54,6 +54,7 @@ IntersectResult Sphere::isIntersected(Ray _ray) {
         float discr = d_dot_v*d_dot_v - a;
         if (discr >= 0) {
             result.is_hit = 1;
+            result.object = this;
             result.distance = -d_dot_v - sqrt(discr);
             result.position = _ray.getPoint(result.distance);
             result.normal = result.position - center;

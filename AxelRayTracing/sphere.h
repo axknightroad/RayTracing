@@ -12,8 +12,9 @@
 #include "vector3d.h"
 #include "intersectResult.h"
 #include "ray.h"
+#include "myobject.h"
 
-class Sphere {
+class Sphere : public MyObject {
 
 private:
     Vector3d center;
@@ -30,7 +31,7 @@ public:
     //获取物体表面一点的法线
     virtual Vector3d getNormal(Vector3d p);
     //用于判断光线和该物体的交点
-    virtual IntersectResult isIntersected(Ray _ray);
+    virtual IntersectResult isIntersected(Ray& _ray);
     
 };
 

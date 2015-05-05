@@ -12,6 +12,12 @@
 		77C21A081AF5299000699DB4 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A071AF5299000699DB4 /* camera.cpp */; };
 		77C21A091AF5D94200699DB4 /* vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 777368E71AF4FDB4005E01FA /* vector3d.cpp */; };
 		77C21A0A1AF5D94600699DB4 /* ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 777368E41AF4FDB4005E01FA /* ray.cpp */; };
+		77C21A291AF77BC200699DB4 /* myobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A281AF77BC200699DB4 /* myobject.cpp */; };
+		77C21A2C1AF88E2200699DB4 /* plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A2B1AF88E2200699DB4 /* plane.cpp */; };
+		77C21A2F1AF8972000699DB4 /* color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A2D1AF8972000699DB4 /* color.cpp */; };
+		77C21A331AF8B61E00699DB4 /* material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A301AF89EA800699DB4 /* material.cpp */; };
+		77C21A361AF8B75800699DB4 /* check.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A341AF8B75800699DB4 /* check.cpp */; };
+		77C21A391AF8BBEA00699DB4 /* phong.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77C21A371AF8BBEA00699DB4 /* phong.cpp */; };
 		77E574071AF4B07F000525C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E573FD1AF0CE8C000525C3 /* OpenGL.framework */; };
 		77E5740B1AF4B0B9000525C3 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E5740A1AF4B0B9000525C3 /* libglfw3.a */; };
 		77E5740D1AF4B0D2000525C3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E5740C1AF4B0D2000525C3 /* IOKit.framework */; };
@@ -42,6 +48,18 @@
 		77C21A041AF51D6E00699DB4 /* sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sphere.cpp; sourceTree = "<group>"; };
 		77C21A061AF527B200699DB4 /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		77C21A071AF5299000699DB4 /* camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = camera.cpp; sourceTree = "<group>"; };
+		77C21A271AF76EC500699DB4 /* myobject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myobject.h; sourceTree = "<group>"; };
+		77C21A281AF77BC200699DB4 /* myobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = myobject.cpp; sourceTree = "<group>"; };
+		77C21A2A1AF79F7700699DB4 /* plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plane.h; sourceTree = "<group>"; };
+		77C21A2B1AF88E2200699DB4 /* plane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plane.cpp; sourceTree = "<group>"; };
+		77C21A2D1AF8972000699DB4 /* color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = color.cpp; sourceTree = "<group>"; };
+		77C21A2E1AF8972000699DB4 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		77C21A301AF89EA800699DB4 /* material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = material.cpp; sourceTree = "<group>"; };
+		77C21A311AF89EA800699DB4 /* material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = material.h; sourceTree = "<group>"; };
+		77C21A341AF8B75800699DB4 /* check.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = check.cpp; sourceTree = "<group>"; };
+		77C21A351AF8B75800699DB4 /* check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = check.h; sourceTree = "<group>"; };
+		77C21A371AF8BBEA00699DB4 /* phong.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = phong.cpp; sourceTree = "<group>"; };
+		77C21A381AF8BBEA00699DB4 /* phong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phong.h; sourceTree = "<group>"; };
 		77E573F11AF0CE36000525C3 /* AxelRayTracing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AxelRayTracing; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E573F41AF0CE36000525C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		77E573FB1AF0CE7D000525C3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -104,6 +122,18 @@
 				77E573F41AF0CE36000525C3 /* main.cpp */,
 				77C21A061AF527B200699DB4 /* camera.h */,
 				77C21A071AF5299000699DB4 /* camera.cpp */,
+				77C21A271AF76EC500699DB4 /* myobject.h */,
+				77C21A2A1AF79F7700699DB4 /* plane.h */,
+				77C21A2B1AF88E2200699DB4 /* plane.cpp */,
+				77C21A281AF77BC200699DB4 /* myobject.cpp */,
+				77C21A2D1AF8972000699DB4 /* color.cpp */,
+				77C21A301AF89EA800699DB4 /* material.cpp */,
+				77C21A311AF89EA800699DB4 /* material.h */,
+				77C21A2E1AF8972000699DB4 /* color.h */,
+				77C21A341AF8B75800699DB4 /* check.cpp */,
+				77C21A371AF8BBEA00699DB4 /* phong.cpp */,
+				77C21A381AF8BBEA00699DB4 /* phong.h */,
+				77C21A351AF8B75800699DB4 /* check.h */,
 			);
 			path = AxelRayTracing;
 			sourceTree = "<group>";
@@ -164,7 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C21A291AF77BC200699DB4 /* myobject.cpp in Sources */,
+				77C21A2F1AF8972000699DB4 /* color.cpp in Sources */,
 				77C21A051AF51D6E00699DB4 /* sphere.cpp in Sources */,
+				77C21A331AF8B61E00699DB4 /* material.cpp in Sources */,
+				77C21A391AF8BBEA00699DB4 /* phong.cpp in Sources */,
+				77C21A361AF8B75800699DB4 /* check.cpp in Sources */,
+				77C21A2C1AF88E2200699DB4 /* plane.cpp in Sources */,
 				77C21A081AF5299000699DB4 /* camera.cpp in Sources */,
 				777368EC1AF4FF63005E01FA /* main.cpp in Sources */,
 				77C21A091AF5D94200699DB4 /* vector3d.cpp in Sources */,
